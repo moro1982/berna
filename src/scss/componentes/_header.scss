@@ -1,0 +1,66 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+    background-color: v.$negro;
+
+    &.inicio {
+        background-image: url("/build/img/hero/jason-goodman-bzqU01v-G54-unsplash-byn.jpg");
+        background-position-x: center;
+        background-position-y: 40%;
+        min-height: 100vh;
+        z-index: 1;
+    }
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+    text-align: justify;
+}
+
+.hero-text {
+    width: 100%;
+    font-weight: bold;
+    text-align: justify;
+    hyphens: auto;
+    padding: 3rem;
+
+    @include m.tablet {
+        width: 75%;
+    }
+    @include m.desktop {
+        width: 60%;
+    }
+
+    // text-center p-5  fw-bold
+}
+
+// Efecto text-reveal
+.activador {
+    color: v.$gris;
+    &:hover {
+        cursor: pointer;
+        filter: drop-shadow(2px 2px 2px black);
+    }
+}
+
+.texto-oculto {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s linear;
+}
+
+.texto-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s linear;
+}
+
+/** HERO **/
+// .hero {
+//     background-image: url("/build/img/hero/jason-goodman-bzqU01v-G54-unsplash-byn.jpg");
+//     background-position-x: center;
+//     background-position-y: 40%;
+//     z-index: 1;
+// }

@@ -1,0 +1,79 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.boton-negro {
+    @include m.boton(v.$negro, v.$blanco, v.$grisOscuro, v.$gris, block);
+}
+.boton-blanco {
+    @include m.boton(v.$blanco, v.$negro, v.$gris, v.$grisOscuro, block);
+}
+.boton-verde {
+    @include m.boton(v.$verde, v.$negro, v.$verdeOscuro, v.$blanco,  block);
+}
+.boton-rojo {
+    @include m.boton(red, v.$blanco, v.$rojoOscuro, v.$gris, block);
+}
+.boton-amarillo {
+    @include m.boton(v.$amarillo, v.$negro, v.$amarilloOscuro, v.$grisOscuro, block);
+}
+.boton-transparente {
+    @include m.boton(v.$transparente, v.$blanco, v.$grisOscuro, v.$gris, block);
+}
+
+.contorno {
+    border: 1px solid v.$blanco;
+}
+
+.whatsapp-btn-container {
+    position: fixed;
+    bottom: -50px;
+    padding: .5rem;
+    opacity: 0;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+    right: 2.5rem;
+
+    .whatsapp-btn {
+        width: 3rem;
+        display: inline-block;
+        @include m.telefono {
+            width: 4rem;
+        }
+        
+        &:hover {
+            transform: scale(1.2);
+            transition: all 400ms;
+            fill: v.$verde;
+            filter: drop-shadow(1px 1px 3px #888);
+
+            &+span {
+                transform: rotateZ(0deg) translateX(0px);
+                opacity: 1;
+            }
+        }
+    }
+
+    span {
+        position: absolute;
+        top: -2rem;
+        left: -2rem;
+        color: v.$verde;
+        font-size: small;
+        font-weight: bold;
+        transform: rotateZ(20deg) translateX(10px);
+        opacity: 0;
+        transition: all 400ms;
+        @include m.telefono {
+            font-size: medium;
+            top: -3rem;
+            left: -2.5rem;
+        }
+    }
+}
+
+@keyframes fade-up {
+    100% {
+        bottom: .5rem;
+        opacity: 1;
+    }
+}

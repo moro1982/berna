@@ -1,0 +1,52 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+// .texto-entrada {
+//     margin: 0 2rem;
+//     // border-bottom: 1px solid v.$gris;
+// }
+
+.comentarios {
+    margin-top: 1rem;
+    border-top: 1px solid v.$gris;
+    border-bottom: 1px solid v.$gris;
+
+    .comentario {
+        padding: 1rem 0; 
+        border-top: 1px solid v.$gris;
+        
+        h4 {
+            font-style: italic;
+        }
+        span {
+            font-weight: v.$bold;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        border-top: 1px solid v.$gris;;
+    }
+
+    legend {
+        margin-top: 1rem;
+        font-style: italic;
+    }
+}
+
+.comment-area {
+    height: 15rem;
+    width: auto;
+}
+
+.likes {
+    display: flex;
+    gap: 1rem;
+
+    p {
+        font-weight: v.$bold;
+    }
+}

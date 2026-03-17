@@ -1,0 +1,110 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.blog {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 3rem;
+    }
+}
+.boton-lupa {
+    border: none;
+}
+.message-placeholder {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.entrada-blog {
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid v.$gris;
+    
+    @include m.telefono {
+        display: flex;
+        align-items: center;
+    }
+}
+.imagen-blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .imagen-small {
+        max-height: 30rem;
+    }
+    .imagen-large {
+        max-width: 80%;
+    }
+}
+.texto-blog {
+    margin: 0 2rem;
+    a {
+        text-decoration: none;
+        color: v.$negro;
+        &:hover {
+            color: v.$grisOscuro;
+        }
+    }
+}
+.texto {
+    text-align: justify;
+    line-height: 1.5;
+}
+/*******************************************************************/
+// Si es estilo del blog, no debería usar selectores generales
+// Si es estilo global, mover a un archivo global
+h2, h3 {
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: v.$bold;
+}
+/*******************************************************************/
+.info-meta {
+    font-style: italic;
+    span {
+        font-weight: v.$bold;
+    }
+    p {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+.sidebar {
+    .titulo {
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.populares-container, .tags-container {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.populares {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.imagen-entrada {
+    display: flex;
+    justify-content: center;
+}
+.tags-container {
+    align-items: center;
+}
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: fit-content;
+}
+.tag {
+    cursor: pointer;
+}
