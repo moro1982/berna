@@ -258,33 +258,22 @@ function abrirGaleria(carpetas, indiceGaleria) {
 
     insertarCarousel(overlay, carpetas[indiceGaleria-1], atributoID, carpetas[indiceGaleria-1].cantidad);
 
-    /*
-    overlay.onclick = function() {  // --> Le asigno un evento de click para que ejecute una función que:
-        const body = document.querySelector('body');    // --> Seleccione el elemento body.
-        body.classList.remove('fijar-body');    // --> Le quite la clase al body.
-        overlay.remove();   // --> Elimine el overlay.
+    overlay.onclick = function(e) {  // --> Le asigno un evento de click para que ejecute una función que:
+        if (e.target === overlay) {
+            console.log(galeria.firstChild);
+            const body = document.querySelector('body');    // --> Seleccione el elemento body.
+            body.classList.remove('fijar-body');    // --> Le quite la clase al body.
+            overlay.remove();   // --> Elimine el overlay.
+        }
     }
-    */
-
-    /*
-    overlay.onkeydown = (e) => {  // --> Le asigno un evento de click para que ejecute una función que:
-        const body = document.querySelector('body');    // --> Seleccione el elemento body.
-        body.classList.remove('fijar-body');    // --> Le quite la clase al body.
-        overlay.remove();   // --> Elimine el overlay.
-    }
-    */
-
-    // Botón para cerrar la ventana modal.
-    const cerrarModal = document.createElement('P');    // --> Crea el elemento.
-    cerrarModal.textContent = 'X';  // --> Le agrega un texto (la X).
-    cerrarModal.classList.add('btn-cerrar');    // --> Le asigna una clase.
-    cerrarModal.onclick = function() {  // --> Le asigno un evento de click para que ejecute una función que:
-        const body = document.querySelector('body');    // --> Selecciona el elemento body.
-        body.classList.remove('fijar-body');    // --> Le quita la clase al body.
-        overlay.remove();   // --> Elimina el overlay.
-    }
-    overlay.appendChild(cerrarModal);   // --> Incorpora el elemento "cerrarModal" como elemento descendiente.
     
+    overlay.onkeydown = (e) => {  // --> Le asigno un evento de tecla para que ejecute una función que:
+        console.log(e);
+        const body = document.querySelector('body');    // --> Seleccione el elemento body.
+        body.classList.remove('fijar-body');    // --> Le quite la clase al body.
+        overlay.remove();   // --> Elimine el overlay.
+    }
+
     // Añade el overlay al HTML.
     const body = document.querySelector('body');    // --> Selecciona el elemento.
     body.classList.add('fijar-body');   // --> Le asigna una clase.

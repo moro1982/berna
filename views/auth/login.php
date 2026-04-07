@@ -29,7 +29,7 @@
                 />
             </div>
         </fieldset>
-        <input type="submit" value="Iniciar Sesión" class="boton-verde mb-4">
+        <input type="submit" value="Iniciar Sesión" class="boton-negro contorno mb-4">
     </form>
 
     <div class="acciones">

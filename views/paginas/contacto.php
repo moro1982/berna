@@ -13,7 +13,7 @@
             <form class="formulario" action="/contacto" method="POST">
                 <legend> ¡Contactame Hoy Mismo! </legend>
                 <?php include_once __DIR__ . '/../templates/form-contacto.php';  ?>
-                <input type="submit" value="Enviar" class="boton-verde mb-4">
+                <input type="submit" value="Enviar" class="boton-transparente contorno mb-4">
             </form>
         </div>
     </main>
