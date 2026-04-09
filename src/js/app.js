@@ -258,20 +258,20 @@ function abrirGaleria(carpetas, indiceGaleria) {
 
     insertarCarousel(overlay, carpetas[indiceGaleria-1], atributoID, carpetas[indiceGaleria-1].cantidad);
 
-    overlay.onclick = function(e) {  // --> Le asigno un evento de click para que ejecute una función que:
+    // Evento de click
+    overlay.onclick = function(e) {
         if (e.target === overlay) {
-            console.log(galeria.firstChild);
-            const body = document.querySelector('body');    // --> Seleccione el elemento body.
-            body.classList.remove('fijar-body');    // --> Le quite la clase al body.
-            overlay.remove();   // --> Elimine el overlay.
+            const body = document.querySelector('body');    // Seleccionar elemento body.
+            body.classList.remove('fijar-body');    // Quitar la clase al body.
+            overlay.remove();   // Eliminar el overlay.
         }
     }
     
-    overlay.onkeydown = (e) => {  // --> Le asigno un evento de tecla para que ejecute una función que:
-        console.log(e);
-        const body = document.querySelector('body');    // --> Seleccione el elemento body.
-        body.classList.remove('fijar-body');    // --> Le quite la clase al body.
-        overlay.remove();   // --> Elimine el overlay.
+    // Le asigno un evento de tecla para que ejecute una función que:
+    overlay.onkeydown = (e) => {
+        const body = document.querySelector('body');    // Seleccione el elemento body.
+        body.classList.remove('fijar-body');    // Le quite la clase al body.
+        overlay.remove();   // Elimine el overlay.
     }
 
     // Añade el overlay al HTML.
