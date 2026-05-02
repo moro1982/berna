@@ -13,14 +13,25 @@
 
 /** CARACTERISTICAS **/
 .seccion-caracteristicas {
-    background-image: url("/build/img/caracteristicas/young-pregnant-woman-work_byn02.jpg");
-    background-position-x: center;
-    background-position-y: 60%;
-    background-size: cover;
-    min-height: 100vh;
+    position: relative;
+    height: auto;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.parallax {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url("/build/img/caracteristicas/young-pregnant-woman-work_byn02.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 60%;
+    z-index: -1;
+    will-change: transform;
 }
 .columna {
     width: 70%;

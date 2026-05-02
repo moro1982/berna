@@ -93,6 +93,16 @@ function ocultarTexto() {
     botonOcultar.classList.remove("texto-visible");
 }
 
+/** PARALLAX **/
+const parallax = document.querySelector('#parallax');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    window.requestAnimationFrame(() => {
+        parallax.style.transform = `translate3d(0, ${scrollY * 0.15}px, 0)`;
+    });
+});
+
 
 /** BARRA DE BÚSQUEDA con JS fetch **/
 // Escuchar Barra de Búsqueda

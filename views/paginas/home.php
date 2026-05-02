@@ -23,7 +23,10 @@
 
         <!-- CARACTERISTICAS DEL SERVICIO -->
         <section class="seccion-caracteristicas">
-            <h1 class="text-uppercase text-center text-light display-2 fw-bold my-4 p-5"> Características del Servicio </h1>
+            <div class="parallax" id="parallax"></div>
+            <h1 class="text-uppercase text-center text-light display-2 fw-bold my-4 p-5"> 
+                Características del Servicio 
+            </h1>
             <div class="row gap-md-5 mx-5 pb-5 columna">
                 <div class="tarjeta col-md">
                     <ul class="m-0">
