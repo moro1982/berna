@@ -31,7 +31,7 @@ $router->get('/entrada', [PaginasController::class, 'entrada']);
 $router->post('/entrada', [PaginasController::class, 'entrada']);
 $router->get('/contacto', [PaginasController::class, 'contacto']);
 $router->post('/contacto', [PaginasController::class, 'contacto']);
-$router->get('/cuestionario', [PaginasController::class, 'cuestionario']);
+// $router->get('/cuestionario', [PaginasController::class, 'cuestionario']);
 $router->post('/diagnostico', [PaginasController::class, 'diagnostico']);
 
 //-> Login - Logout

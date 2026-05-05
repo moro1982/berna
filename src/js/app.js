@@ -93,9 +93,273 @@ function ocultarTexto() {
     botonOcultar.classList.remove("texto-visible");
 }
 
+/** BRANDOMATIC **/
+const botonBrandomatic = document.querySelector('#brandomatic');
+botonBrandomatic.addEventListener( 'click', () => abrirBrandomatic() );
+
+function abrirBrandomatic() {
+    /* OVERLAY */
+    const overlay = document.createElement('DIV');  // --> Crea el elemento.
+    overlay.classList.add('overlay');   // --> Le asigna una clase.
+    // Evento de click
+    overlay.onclick = function(e) {
+        if (e.target === overlay) {
+            const body = document.querySelector('body');    // Seleccionar elemento body.
+            body.classList.remove('fijar-body');            // Quitar la clase al body.
+            overlay.remove();                               // Eliminar el overlay.
+        }
+    }
+
+    /* CUESTIONARIO */
+    const cuestionario = document.createElement('DIV');
+    cuestionario.classList.add('bg-black');
+    cuestionario.classList.add('my-5');
+    cuestionario.innerHTML = `
+        <!-- ENCABEZADO -->
+        <div class="bg-black py-4">
+            <h1 class="container text-center text-light"> Brand 'O Matic </h1>
+            <p class="container text-center px-5 py-3 text-light"> Completa la siguiente encuesta para obtener un diagnóstico sobre tu marca de forma inmediata. </p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="bg-black">
+            <form class="container formulario bg-black" id="cuestionario">
+                <legend class="mb-5"> 
+                    Responda las siguientes preguntas para obtener un diagnóstico al instante
+                </legend>
+                <!-- PREGUNTAS -->
+                <ul class="list-group">
+                    <!-- PREGUNTA 1 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿La identidad de marca está presente y aplicada en todos los productos y espacios de la empresa?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="si01" class="form-label mb-1"> Sí </label>
+                            <input id="si01" type="radio" name="preg01" value="1" required>
+                            <label for="no01" class="form-label mb-1"> No </label>
+                            <input id="no01" type="radio" name="preg01" value="0" required>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 2 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿Qué porcentaje de la audiencia general reconoce la marca sin ayuda?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="valor02" class="form-label mb-1"> Porcentaje </label>
+                            <input id="valor02" type="range" value="0" min="0" max="1" step=".25" oninput="this.nextElementSibling.value = this.value * 100" name="preg02" required>
+                            <output> 0 </output>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 3 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿Actualmente hay campañas activas financiadas para aumentar el reconocimiento de marca?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="si03" class="form-label mb-1"> Sí </label>
+                            <input id="si03" type="radio" name="preg03" value="1" required>
+                            <label for="no03" class="form-label mb-1"> No </label>
+                            <input id="no03" type="radio" name="preg03" value="0" required>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 4 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿Cómo es percibida la calidad de los productos o servicios de la marca?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="mala04" class="form-label mb-1"> Mala </label>
+                            <input id="mala04" type="radio" name="preg04" value="0" required>
+                            <label for="regular04" class="form-label mb-1"> Regular </label>
+                            <input id="regular04" type="radio" name="preg04" value=".25" required>
+                            <label for="buena04" class="form-label mb-1"> Buena </label>
+                            <input id="buena04" type="radio" name="preg04" value=".5" required>
+                            <label for="muyBuena04" class="form-label mb-1"> Muy Buena </label>
+                            <input id="muyBuena04" type="radio" name="preg04" value="1" required>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 5 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿La marca ofrece algún producto o servicio de categoría Premium?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="si05" class="form-label mb-1"> Sí </label>
+                            <input id="si05" type="radio" name="preg05" value="1" required>
+                            <label for="no05" class="form-label mb-1"> No </label>
+                            <input id="no05" type="radio" name="preg05" value="0" required>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 6 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿Existe una Propuesta de Valor Única (PVU) que diferencie claramente a la marca de su competencia?
+                        </div>
+                        <div></div>
+                        <div>
+                            <div class="d-flex gap-3 align-items-center">
+                                <label for="si06" class="form-label mb-1"> Sí </label>
+                                <input id="si06" type="radio" name="preg06" value="1" required>
+                                <label for="no06" class="form-label mb-1"> No </label>
+                                <input id="no06" type="radio" name="preg06" value="0" required>
+                            </div>
+                            <p class="text-light mb-1">
+                                **(No puede basarse únicamente en precio, calidad o servicio)**
+                            </p>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 7 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿El público siente un vínculo emocional con la marca y la recomienda de forma espontánea (boca en boca)?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="si07" class="form-label mb-1"> Sí </label>
+                            <input id="si07" type="radio" name="preg07" value="1" required>
+                            <label for="no07" class="form-label mb-1"> No </label>
+                            <input id="no07" type="radio" name="preg07" value="0" required>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 8 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿El mensaje de marca es claro y coherente en todos los canales de comunicación?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="si08" class="form-label mb-1"> Sí </label>
+                            <input id="si08" type="radio" name="preg08" value="1" required>
+                            <label for="no08" class="form-label mb-1"> No </label>
+                            <input id="no08" type="radio" name="preg08" value="0" required>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 9 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿Los consumidores consideran que el precio es justo en relación con los beneficios que perciben?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="si09" class="form-label mb-1"> Sí </label>
+                            <input id="si09" type="radio" name="preg09" value="1" required>
+                            <label for="no09" class="form-label mb-1"> No </label>
+                            <input id="no09" type="radio" name="preg09" value="0" required>
+                        </div>
+                    </li>
+                    <!-- PREGUNTA 10 -->
+                    <li class="pregunta list-group-item bg-black text-light mb-5">
+                        <div class="square-marker d-flex align-items-center">
+                            <img class="image-fluid" width="50px" src="build/img/Berna_Logo-tiza-Mesa_de_trabajo_1-copia.png">
+                        </div>
+                        <div>
+                            ¿La comunicación de marca posiciona al cliente como protagonista y a la marca como la guía que lo ayuda a lograr sus objetivos?
+                        </div>
+                        <div></div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <label for="si10" class="form-label mb-1"> Sí </label>
+                            <input id="si10" type="radio" name="preg10" value="1" required>
+                            <label for="parcial10" class="form-label mb-1"> Parcialmente </label>
+                            <input id="parcial10" type="radio" name="preg10" value=".5" required>
+                            <label for="no10" class="form-label mb-1"> No </label>
+                            <input id="no10" type="radio" name="preg10" value="0" required>
+                        </div>
+                    </li>
+                </ul>
+                <button 
+                    name="enviar_respuestas"
+                    class="boton-verde mt-5 mb-3"
+                    id="enviar_respuestas"
+                >
+                    Enviar Respuestas
+                </button>
+            </form>
+        </div>
+    `;
+    overlay.appendChild(cuestionario);
+
+    // Añade el overlay al HTML.
+    const body = document.querySelector('body');    // --> Selecciona el elemento.
+    body.classList.add('fijar-body');               // --> Le asigna una clase.
+    body.appendChild(overlay);             // --> Incorpora al body el elemento "overlay".
+
+    /* DIAGNÓSTICO */
+    const botonEnviarRespuestas = document.querySelector('#enviar_respuestas');
+    if (botonEnviarRespuestas !== null) {
+        
+        botonEnviarRespuestas.addEventListener('click', (e) => {
+            e.preventDefault();
+            const form = document.querySelector('#cuestionario');
+            const inputs = form.querySelectorAll(
+                'input[type="radio"]:checked, input[type="range"]'
+            );
+            let total = 0;
+            let cantPreguntas = 0;
+            inputs.forEach(input => {
+                const valor = parseFloat(input.value);
+                if (!isNaN(valor)) {
+                    total += valor;
+                    cantPreguntas++;
+                }
+            });
+            const diagnostico = document.createElement('DIV');
+            const puntaje = cantPreguntas > 0 ? ((total / cantPreguntas) * 100).toFixed(2) : 0;
+            diagnostico.classList.add('bg-black');
+            diagnostico.classList.add('my-5');
+            diagnostico.innerHTML = `
+                <div class="bg-black py-4">
+                    <h1 class="container text-center text-light"> Su Diagnóstico </h1>
+                    <p class="container text-center px-5 py-3 text-light">
+                        Usted ha obtenido el siguiente puntaje:
+                    </p>
+                    <h2 class="text-light"> ${puntaje} % </h2>
+                    <div class="container d-flex justify-content-center">
+                        <a href="/" class="boton-amarillo my-3"> Volver </a>
+                    </div>
+                </div>
+            `;
+            overlay.appendChild(diagnostico);
+            overlay.removeChild(cuestionario);
+        });
+    }
+}
+
 /** PARALLAX **/
 const parallax = document.querySelector('#parallax');
-
 window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
     window.requestAnimationFrame(() => {

@@ -64,7 +64,6 @@
 .diagnostico {
     background-color: darkslategrey;
 }
-
 .pregunta {
     display: grid;
     grid-template-columns: 1fr 7fr;
@@ -74,4 +73,11 @@
     &::before {
         text-align: center;
     }
+}
+.square-marker {
+    width: 2.5rem;
+    height: 2.5rem;
+    // background-color: white;
+    justify-self: start;
+    align-self: center;
 }

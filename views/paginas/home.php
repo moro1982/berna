@@ -139,7 +139,12 @@
             <form class="formulario" action="/" method="POST">
                 <legend class="contacto-legend"> Me gustaría conocer más tu empresa </legend>
                 <?php include_once __DIR__ . '/../templates/form-contacto.php';  ?>
-                <input class="boton-transparente contorno mt-4" type="submit" value="Enviar">
+                <input 
+                    class="boton-transparente contorno mt-4" 
+                    type="submit" 
+                    name="enviar_email"
+                    value="Enviar"
+                >
             </form>
         </section>
 
