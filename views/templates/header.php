@@ -61,7 +61,6 @@
                         <span id="hide-text" onclick="ocultarTexto()" class="activador texto-oculto"> ... << Ocultar Texto >> </span> 
                     </p>
                     <div class="d-flex justify-content-center w-75 w-md-50 mb-5">
-                        <!-- <a href="/cuestionario" class="boton-blanco fs-4"> HACÉ TU PROPIO DIAGNÓSTICO </a> -->
                         <button class="boton-blanco fs-4 p-4" id="brandomatic"> HACÉ TU PROPIO DIAGNÓSTICO </button>
                     </div>
                 </section>

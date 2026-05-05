@@ -320,7 +320,6 @@ function abrirBrandomatic() {
     /* DIAGNÓSTICO */
     const botonEnviarRespuestas = document.querySelector('#enviar_respuestas');
     if (botonEnviarRespuestas !== null) {
-        
         botonEnviarRespuestas.addEventListener('click', (e) => {
             e.preventDefault();
             const form = document.querySelector('#cuestionario');

@@ -15,49 +15,24 @@ class PaginasController {
         $inicio = true;
         $posts = Post::getMostPopular();
 
-        // $total = 0;
-        // $cantPreguntas = 0;
-        // $puntaje = 0;
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-            //Caso 1: enviar Email desde formulario.
-            if (isset($_POST['enviar_email'])) {
-                $datos = $_POST;
-                $alertas = validarDatosContacto($datos);
-
-                $mail = new Email();
-                
-                //-> Enviar el email
-                if (empty($alertas)) {
-                    $mail->enviarDatosContacto($datos);
-                    $alertas['exito'][] = 'Mensaje enviado correctamente';
-                } else {
-                    $alertas['error'][] = 'ERROR - El mensaje no se pudo enviar';
-                }
+            $datos = $_POST;
+            $alertas = validarDatosContacto($datos);
+            $mail = new Email();
+            
+            //-> Enviar el email
+            if (empty($alertas)) {
+                $mail->enviarDatosContacto($datos);
+                $alertas['exito'][] = 'Mensaje enviado correctamente';
+            } else {
+                $alertas['error'][] = 'ERROR - El mensaje no se pudo enviar';
             }
-
-            // Caso 2: enviar respuestas del Brandomatic
-            // if (isset($_POST['enviar_respuestas'])) {
-            //     $respuestas = $_POST;
-
-            //     foreach( $respuestas as $key => $value ) {
-            //         $valor = filter_var($value, FILTER_VALIDATE_FLOAT);
-            //         $total = $total + $valor;
-            //         $cantPreguntas += 1;
-            //     }
-
-            //     $cantPreguntas = filter_var($cantPreguntas, FILTER_VALIDATE_FLOAT);
-            //     $puntaje = ($total / $cantPreguntas) * 100;
-            //     $puntaje = round($puntaje, 2);
-            // }
         }
 
         $router->render('paginas/home', [
             'alertas' => $alertas,
             'inicio' => $inicio,
             'posts' => $posts
-            // 'puntaje' => $puntaje
         ]);
     }
 
@@ -144,35 +119,5 @@ class PaginasController {
             'alertas' => $alertas
         ]);
     }
-
-    // public static function cuestionario(Router $router) {
-    //     $router->render('brandomatic/cuestionario');
-    // }
-
-    // public static function diagnostico(Router $router) {
-        
-    //     $total = 0;
-    //     $cantPreguntas = 0;
-    //     $puntaje = 0;
-
-    //     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            
-    //         $respuestas = $_POST;
-
-    //         foreach( $respuestas as $key => $value ) {
-    //             $valor = filter_var($value, FILTER_VALIDATE_FLOAT);
-    //             $total = $total + $valor;
-    //             $cantPreguntas += 1;
-    //         }
-    //         $cantPreguntas = filter_var($cantPreguntas, FILTER_VALIDATE_FLOAT);
-    //         $puntaje = ($total / $cantPreguntas) * 100;
-    //         $puntaje = round($puntaje, 2);
-    //     }
-
-    //     $router->render('paginas/home', [
-    //         'puntaje' => $puntaje
-    //     ]);
-    // }
-
     
 }
