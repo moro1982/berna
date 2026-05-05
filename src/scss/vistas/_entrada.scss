@@ -1,10 +1,21 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-// .texto-entrada {
-//     margin: 0 2rem;
-//     // border-bottom: 1px solid v.$gris;
-// }
+.contenido {
+    .brief {
+        font-weight: v.$bold;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    @include m.telefono {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        .brief {
+            text-align: start;
+        }
+    }
+}
 
 .comentarios {
     margin-top: 1rem;
@@ -44,6 +55,8 @@
 
 .likes {
     display: flex;
+    align-items: baseline;
+    justify-content: end;
     gap: 1rem;
 
     p {

@@ -10,30 +10,36 @@
         ?>
 
         <!-- ARTICULO de BLOG -->
-        <h2 class="py-5"> <?php echo $post->title; ?> </h2>
-        <!-- Imagen -->
-        <picture class="imagen-blog mb-4">
-            <source srcset="/imagenes/<?php echo $post->image; ?>" type="image/avif">
-            <source srcset="/imagenes/<?php echo $post->image; ?>" type="image/webp">
-            <img class="imagen-large" loading="lazy" src="/imagenes/<?php echo $post->image; ?>" alt="Imagen Entrada Blog">
-        </picture>
-        <!-- Texto -->
-        <div class="container texto-entrada">
-            <p class="info-meta">
-                Escrito el: <span> <?php echo $post->created_at; ?> </span> 
-                por: <span> Admin </span> 
+        
+        <!-- ENCABEZADO -->
+        <div class="container mb-5">
+            <h1 class="py-5 fw-bold text-center"> <?php echo $post->title; ?> </h1>
+            <p class="info-meta text-center fs-2">
+                Escrito por: <span> Berna </span> 
             </p>
+        </div>
+
+        <!-- Texto -->
+        <div class="container contenido">
+            <p class="brief"> <?php echo $post->brief; ?> </p>
+            <!-- Imagen -->
+            <picture class="imagen-blog mb-4">
+                <source srcset="/imagenes/<?php echo $post->image; ?>" type="image/avif">
+                <source srcset="/imagenes/<?php echo $post->image; ?>" type="image/webp">
+                <img class="imagen-large" loading="lazy" src="/imagenes/<?php echo $post->image; ?>" alt="Imagen Entrada Blog">
+            </picture>
+            <div></div>
+            <!-- Contenido del post -->
+            <p class="texto"> <?php echo nl2br($post->content); ?> </p>
+            <div></div>
             <!-- Likes -->
             <div class="likes">
                 <p> <?php echo $nroLikes; ?> </p>
                 <form action="/entrada/like" method="post">
                     <input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
-                    <button type="submit">❤️ Me Gusta</button>
+                    <button type="submit" class="boton-negro">❤️ Me Gusta</button>
                 </form>
             </div>
-            
-            <!-- Contenido del post -->
-            <p class="texto"> <?php echo nl2br($post->content); ?> </p>
         </div>
         <!-- FIN ARTICULO -->
         
