@@ -93,6 +93,7 @@ function ocultarTexto() {
     botonOcultar.classList.remove("texto-visible");
 }
 
+
 /** BRANDOMATIC **/
 const botonBrandomatic = document.querySelector('#brandomatic');
 botonBrandomatic.addEventListener( 'click', () => abrirBrandomatic() );
@@ -302,7 +303,7 @@ function abrirBrandomatic() {
                 </ul>
                 <button 
                     name="enviar_respuestas"
-                    class="boton-verde mt-5 mb-3"
+                    class="boton-transparente contorno mt-5 mb-3"
                     id="enviar_respuestas"
                 >
                     Enviar Respuestas
@@ -330,6 +331,7 @@ function abrirBrandomatic() {
             let cantPreguntas = 0;
             inputs.forEach(input => {
                 const valor = parseFloat(input.value);
+                // Aquí debería chequearse que el valor exista, además de ser un número válido.
                 if (!isNaN(valor)) {
                     total += valor;
                     cantPreguntas++;
@@ -356,6 +358,7 @@ function abrirBrandomatic() {
         });
     }
 }
+
 
 /** PARALLAX **/
 const parallax = document.querySelector('#parallax');
