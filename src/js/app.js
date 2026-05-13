@@ -22,9 +22,9 @@ function iniciarApp(url) {
             ];
             crearMiniaturas("seccion00", carpetas, 11);
             break;
-        case '/servicios':
-            resaltarActual('servicios');
-            break;
+        // case '/servicios':
+        //     resaltarActual('servicios');
+        //     break;
         case '/portfolio':
             resaltarActual('portfolio');
             carpetas = [
@@ -102,12 +102,16 @@ function abrirBrandomatic() {
     /* OVERLAY */
     const overlay = document.createElement('DIV');  // --> Crea el elemento.
     overlay.classList.add('overlay');   // --> Le asigna una clase.
+
     // Evento de click
     overlay.onclick = function(e) {
         if (e.target === overlay) {
-            const body = document.querySelector('body');    // Seleccionar elemento body.
-            body.classList.remove('fijar-body');            // Quitar la clase al body.
-            overlay.remove();                               // Eliminar el overlay.
+            // Quitamos clase 'show' para transición de salida.
+            overlay.classList.remove('show');
+            // Pequeña espera para esperar que termine la animación.
+            setTimeout(() => {
+                overlay.remove();           // Eliminar el overlay.
+            }, 500);
         }
     }
 
@@ -315,8 +319,11 @@ function abrirBrandomatic() {
 
     // Añade el overlay al HTML.
     const body = document.querySelector('body');    // --> Selecciona el elemento.
-    body.classList.add('fijar-body');               // --> Le asigna una clase.
     body.appendChild(overlay);             // --> Incorpora al body el elemento "overlay".
+
+    setTimeout(() => {
+        overlay.classList.add('show');
+    }, 100);
 
     /* DIAGNÓSTICO */
     const botonEnviarRespuestas = document.querySelector('#enviar_respuestas');
@@ -537,23 +544,28 @@ function abrirGaleria(carpetas, indiceGaleria) {
     // Evento de click
     overlay.onclick = function(e) {
         if (e.target === overlay) {
-            const body = document.querySelector('body');    // Seleccionar elemento body.
-            body.classList.remove('fijar-body');    // Quitar la clase al body.
-            overlay.remove();   // Eliminar el overlay.
+            overlay.classList.remove('show');
+            setTimeout(() => {
+                overlay.remove();   // Eliminar el overlay.
+            }, 500);
         }
     }
     
-    // Le asigno un evento de tecla para que ejecute una función que:
+    // Evento de tecla
     overlay.onkeydown = (e) => {
-        const body = document.querySelector('body');    // Seleccione el elemento body.
-        body.classList.remove('fijar-body');    // Le quite la clase al body.
-        overlay.remove();   // Elimine el overlay.
+        overlay.classList.remove('show');
+        setTimeout(() => {
+            overlay.remove();   // Eliminar el overlay.
+        }, 500);
     }
 
     // Añade el overlay al HTML.
     const body = document.querySelector('body');    // --> Selecciona el elemento.
-    body.classList.add('fijar-body');   // --> Le asigna una clase.
     body.appendChild(overlay);  // --> Incorpora al body el elemento "overlay" como elemento descendiente.
+
+    setTimeout(() => {
+        overlay.classList.add('show');
+    }, 100);
 }
 
 function insertarCarousel(element, folder, target, slidesNr) {

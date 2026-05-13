@@ -52,15 +52,7 @@
     line-height: 1.5;
     hyphens: auto;
 }
-/*******************************************************************/
-// Si es estilo del blog, no debería usar selectores generales
-// Si es estilo global, mover a un archivo global
-h2, h3 {
-    padding: 1rem 0;
-    text-align: center;
-    font-weight: v.$bold;
-}
-/*******************************************************************/
+
 .info-meta {
     font-style: italic;
     span {
