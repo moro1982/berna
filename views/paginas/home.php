@@ -54,7 +54,7 @@
 
         <!-- ENLACE A BLOG -->
         <section class="container">
-            <h2 class="text-center my-4"> Trends </h2>
+            <h2 class="text-center my-4 text-uppercase fw-bold"> Trends </h2>
             <div class="home-articulos">
                 <?php foreach ($posts as $post):?>
                     <div class="home-articulo">
@@ -81,7 +81,9 @@
 
         <!-- PORTFOLIO -->
         <section class="bg-black pb-5">
-            <h2 class="text-center text-light my-4 py-5"> Nuestros Proyectos </h2>
+            <h2 class="text-center text-light text-uppercase fw-bold my-4 py-5">
+                Nuestros Proyectos
+            </h2>
             <ul id="seccion00" class="thumbnails">
               <!-- Miniaturas generadas por JS -->
             </ul>
