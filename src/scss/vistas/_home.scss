@@ -88,6 +88,14 @@
     background-color: black;
     align-content: center;
 }
+.retrato-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.retrato {
+    clip-path: circle(45%);
+}
 .comillas {
     position: relative;
     top: 2rem;

@@ -91,44 +91,9 @@
 
         <!-- NUESTROS CLIENTES DICEN -->
         <section class="seccion-opiniones container-fluid">
-            <!-- <h2 class="text-uppercase text-center fw-bold my-4 p-2"> Nuestro clientes dicen </h2> -->
-            <!-- Opiniones -->
-            <div class="container-fluid opiniones">
-                <div class="opinion">
-                    <img class="comillas" src="/build/img/comillas_quote.png" width="60px" alt="Imagen_Comillas">
-                    <p class="opinion-texto">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium".
-                    </p>
-                </div>
-                <div class="opinion">
-                    <img class="comillas" src="/build/img/comillas_quote.png" width="60px" alt="Imagen_Comillas">
-                    <p class="opinion-texto"> 
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit".
-                    </p>
-                </div>
-                <div class="opinion">
-                    <img class="comillas" src="/build/img/comillas_quote.png" width="60px" alt="Imagen_Comillas">
-                    <p class="opinion-texto"> 
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit".
-                    </p>
-                </div>
+            <div id="opiniones" class="container-fluid opiniones">
+                <!-- Testimonios generados por JS -->
             </div>
-            <!-- Botón a Brandomatic -->
-            <!-- <div class="d-flex justify-content-center my-5">
-                <a href="/cuestionario" class="boton-negro fs-4"> HACÉ TU PROPIO DIAGNÓSTICO </a>
-            </div> -->
-            <!-- Estadísticas -->
-            <!-- <div class="d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center">
-                <div>
-                    <p class="text-uppercase"><span class="nro">90</span> Clientes Satisfechos</p>
-                </div>
-                <div>
-                    <p class="text-uppercase"><span class="nro"> 98 </span> % Tasa de Satisfacción </p>
-                </div>
-                <div>
-                    <p class="text-uppercase"><span class="nro"> 15 </span> Años de Experiencia</p>
-                </div>
-            </div> -->
         </section>
 
         <!-- Alertas -->

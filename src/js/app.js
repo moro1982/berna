@@ -21,6 +21,24 @@ function iniciarApp(url) {
                 {ruta : 'vitaMarket', cantidad : 3}
             ];
             crearMiniaturas("seccion00", carpetas, 11);
+            testimonios = [
+                {
+                    ruta : 'testimonios/retrato_01', 
+                    nombre : 'Cliente_01', 
+                    texto : 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"'
+                },
+                {
+                    ruta : 'testimonios/retrato_02',
+                    nombre : 'Cliente_02',
+                    texto : 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit"'
+                },
+                {
+                    ruta : 'testimonios/retrato_03',
+                    nombre : 'Cliente_03',
+                    texto : 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"'
+                }
+            ];
+            crearTestimonios("opiniones", testimonios, 3);
             break;
         // case '/servicios':
         //     resaltarActual('servicios');
@@ -45,7 +63,6 @@ function iniciarApp(url) {
         case '/blog':
             resaltarActual('blog');
             escucharBusqueda();
-            traerPopulares();
             break;
         case '/login':
             resaltarActual('login');
@@ -618,5 +635,32 @@ function crearGaleria(folder, target, q) {
             indicadores.lastChild.setAttribute('aria-current', 'true');
             item.classList.add('active');
         }
+    }
+}
+
+
+/* TESTIMONIOS DE CLIENTES */
+function crearTestimonios(idSeccion, testimonios, nroTestimonios) {
+    const contenedor = document.querySelector(`#${idSeccion}`);
+    for (let index = 0; index < nroTestimonios; index++) {
+        const testimonio = document.createElement('DIV');
+        testimonio.classList.add('opinion');
+        const imagen = document.createElement('picture');
+        imagen.classList.add('retrato-container');
+        imagen.innerHTML = `
+            <source srcset="build/img/${testimonios[index].ruta}.avif" type="image/avif">
+            <source srcset="build/img/${testimonios[index].ruta}.webp" type="image/webp">
+            <img class="retrato" loading="lazy" width="200px" height="200px" src="build/img/${testimonios[index].ruta}.jpg" alt="Foto_Testimonio_Cliente">
+        `;
+        testimonio.appendChild(imagen);
+        const texto = document.createElement('DIV');
+        texto.innerHTML = `
+            <img class="comillas" src="/build/img/comillas_quote.png" width="60px" alt="Imagen_Comillas">
+            <p class="opinion-texto">
+                ${testimonios[index].texto}
+            </p>
+        `;
+        testimonio.appendChild(texto);
+        contenedor.appendChild(testimonio);
     }
 }
