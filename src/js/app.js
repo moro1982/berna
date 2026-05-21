@@ -371,12 +371,27 @@ function abrirBrandomatic() {
                     <p class="container text-center px-5 py-3 text-light">
                         Usted ha obtenido el siguiente puntaje:
                     </p>
-                    <h2 class="text-light"> ${puntaje} % </h2>
-                    <div class="container d-flex justify-content-center">
-                        <a href="/" class="boton-amarillo my-3"> Volver </a>
-                    </div>
                 </div>
             `;
+            const resultado = document.createElement('H2');
+            resultado.classList.add('fw-bolder');
+            resultado.textContent = `${puntaje} %`;
+            if (puntaje >= 80) {
+                resultado.classList.add('text-success');
+            } else if (puntaje >= 40 && puntaje < 80) {
+                resultado.classList.add('text-warning');
+            } else {
+                resultado.classList.add('text-danger');
+            }
+            diagnostico.appendChild(resultado);
+            const volver = document.createElement('DIV');
+            volver.classList.add('container', 'd-flex', 'justify-content-center');
+            const boton = document.createElement('A');
+            boton.setAttribute('href', '/');
+            boton.classList.add('boton-amarillo', 'my-3');
+            boton.textContent = 'Volver';
+            volver.appendChild(boton);
+            diagnostico.appendChild(volver);
             overlay.appendChild(diagnostico);
             overlay.removeChild(cuestionario);
         });
