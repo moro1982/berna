@@ -84,9 +84,11 @@
 .opinion {
     border: 1px solid;
     border-radius: 10px;
-    // contain: layout;
     background-color: black;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .retrato-container {
     display: flex;
@@ -108,6 +110,14 @@
     text-align: center;
     color: white;
 }
+.contacto {
+    padding-bottom: 2rem;
+    svg:hover {
+        transition: color 0.15s ease-in-out;
+        color: v.$grisOscuro;
+    }
+}
+
 
 // Estadisticas
 .nro {

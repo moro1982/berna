@@ -67,11 +67,11 @@ function procesarImagenes(file, outputSubDir) {
 export function dev(done) {
     watch('src/scss/**/*.scss', css);
     watch('src/js/**/*.js', js);
-    watch('src/img/**/*.{jpg,png}', imagenes);
+    // watch('src/img/**/*.{jpg,png}', imagenes);
 }
 
-export default series(js, css, imagenes, dev);
-// export default series(js, css, dev);
+// export default series(js, css, imagenes, dev);
+export default series(js, css, dev);
 // export default series(js, css, imagenes);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
