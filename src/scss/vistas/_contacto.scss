@@ -4,10 +4,11 @@
 .contacto-main {
     background-image: 
         linear-gradient(
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0.55)
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.1)
         ),
-        url("/build/img/contacto/contacto-bg.webp")
+        url("/build/img/contacto/boardroom.avif")
     ;
     background-size: cover;
+    background-position-x: center;
 }

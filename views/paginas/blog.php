@@ -1,6 +1,6 @@
     <main>
         <!-- ENCABEZADO BLOG -->
-        <div class="bg-black py-4">
+        <div class="blog-main py-4">
             <h1 class="titulo-seccion container text-center text-light text-uppercase fw-bold"> Blog </h1>
             <p class="container text-center px-5 py-3 text-light">
                 Sumérgete en mi blog donde comparto insights, tendencias y proyectos que inspiran.
@@ -36,7 +36,6 @@
                 </div>
                 <!-- Artículos de Blog traídos con fetch() -->
             </div>
-
 
             <!-- BARRA VERTICAL DERECHA -->
             <aside class="sidebar my-3">

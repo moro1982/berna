@@ -1,6 +1,18 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+.portfolio-main {
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+        ),
+        url("/build/img/contacto/maxresdefault.avif")
+    ;
+    background-size: cover;
+    background-position: center;
+}
+
 .galeria {
     width: 90%;
     margin: 0 auto 2rem;

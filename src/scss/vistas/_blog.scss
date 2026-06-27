@@ -1,6 +1,18 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+.blog-main {
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.1)
+        ),
+        url("/build/img/caracteristicas/charles-forerunner-3fPXt37X6UQ-unsplash.avif")
+    ;
+    background-size: cover;
+    background-position-x: center;
+}
+
 .blog {
     @include m.tablet {
         display: grid;
