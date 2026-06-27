@@ -1,7 +1,7 @@
-    <main>
-        <div class="bg-black py-4">
-            <h1 class="container text-center text-warning"> Contacto </h1>
-            <p class="container text-center px-5 py-3 text-light"> Si estás listo para impulsar tu marca y destacar en el mercado, contactame. Estoy feliz por la oportunidad de colaborar con vos y ayudarte a alcanzar tus metas de branding.</p>
+    <main class="contacto-main">
+        <div class="py-4">
+            <h1 class="titulo-seccion container text-center text-warning fw-bold text-uppercase"> Contacto </h1>
+            <p class="container text-center px-5 py-3 text-light"> Si estás listo para impulsar tu marca y destacar en el mercado, contactame. </p>
         </div>
 
         <!-- Alertas -->
@@ -9,7 +9,7 @@
             <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
         </div>
 
-        <div class="container mt-3 mb-5">
+        <div class="container mt-3 pb-5">
             <form class="formulario" action="/contacto" method="POST">
                 <legend> ¡Contactame Hoy Mismo! </legend>
                 <?php include_once __DIR__ . '/../templates/form-contacto.php';  ?>

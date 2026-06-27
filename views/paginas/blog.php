@@ -1,9 +1,9 @@
     <main>
         <!-- ENCABEZADO BLOG -->
         <div class="bg-black py-4">
-            <h1 class="container text-center text-light"> Blog </h1>
+            <h1 class="titulo-seccion container text-center text-light text-uppercase fw-bold"> Blog </h1>
             <p class="container text-center px-5 py-3 text-light">
-                Exploremos el diseño con pasión y creatividad. Sumérgete en mi blog donde comparto insights, tendencias y proyectos que inspiran.
+                Sumérgete en mi blog donde comparto insights, tendencias y proyectos que inspiran.
             </p>
             <!-- Buscador (con JS) -->
             <nav class="container w-75 navbar bg-body-tertiary">

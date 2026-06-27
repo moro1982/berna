@@ -40,11 +40,13 @@
                             <li class="nav-item">
                                 <a id="blog" class="nav-link text-uppercase" href="/blog"> Blog </a>
                             </li>
-                            <li class="nav-item">
-                                <a id="login" class="nav-link text-uppercase bg-black" href="/login"> Login </a>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a id="contacto" class="nav-link text-uppercase bg-black" href="/contacto"> Contacto </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a id="login" class="nav-link text-uppercase bg-black" href="/login"> Login </a>
                             </li>
                         </ul>
                     </div>

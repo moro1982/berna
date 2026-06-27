@@ -1,0 +1,13 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contacto-main {
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+        ),
+        url("/build/img/contacto/contacto-bg.webp")
+    ;
+    background-size: cover;
+}

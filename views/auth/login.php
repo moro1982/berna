@@ -1,11 +1,13 @@
-<main class="container">
-    <h1 class="text-center">Iniciar Sesión</h1>
+<main class="">
+    <div class="bg-black py-4">
+        <h1 class="text-light titulo-seccion text-center fw-bold text-uppercase"> Iniciar Sesión </h1>
+    </div>
 
     <?php
         include_once __DIR__ . "/../templates/alertas.php";
     ?>
 
-    <form method="POST" action="/login" class="container-fluid formulario mb-4">
+    <form method="POST" action="/login" class="container-fluid formulario my-4 ">
         <legend>Email y Password</legend>
         <fieldset class="campos">
             <div class="campo">
