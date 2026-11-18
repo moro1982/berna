@@ -102,7 +102,7 @@
         </div>
 
         <!-- FORMULARIO DE CONTACTO -->
-        <section class="mt-3 mb-1">
+        <section class="mt-3 mb-5">
             <form class="formulario" action="/" method="POST">
                 <legend class="contacto-legend"> Me gustaría conocer más tu empresa </legend>
                 <?php include_once __DIR__ . '/../templates/form-contacto.php';  ?>

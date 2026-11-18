@@ -2,14 +2,23 @@
 @use '../base/mixins' as m;
 
 .formulario {
-    width: 85%;
+    width: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-self: center;
     padding: 4rem 0;
-    border-radius: 1rem;
+
+    @include m.telefono {
+        width: 90%;
+        border-radius: 1rem;
+    }
+
+    @include m.tablet {
+        width: 70%;
+        border-radius: 1rem;
+    }
 
     legend {
         text-transform: uppercase;

@@ -14,14 +14,14 @@
                 <!-- PREGUNTAS -->
                 <ol class="list-group list-group-numbered">
                     <!-- PREGUNTA 1 -->
-                    <li class="pregunta list-group-item bg-black text-light">
+                    <li class="pregunta list-group-item bg-black text-light mt-5">
                         <div>
                             ¿La identidad de marca está presente y aplicada en todos los productos y espacios de la empresa?
                         </div>
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si01" class="form-label mb-1"> Sí </label>
-                            <input id="si01" type="radio" name="preg01" value="1" required>
+                            <input id="si01" type="radio" name="preg01" value="12" required>
                             <label for="no01" class="form-label mb-1"> No </label>
                             <input id="no01" type="radio" name="preg01" value="0" required>
                         </div>
@@ -34,7 +34,7 @@
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="valor02" class="form-label mb-1"> Porcentaje </label>
-                            <input id="valor02" type="range" value="0" min="0" max="1" step=".25" oninput="this.nextElementSibling.value = this.value * 100" name="preg02" required>
+                            <input id="valor02" type="range" value="0" min="0" max="10" step="1" oninput="this.nextElementSibling.value = this.value * 10" name="preg02" required>
                             <output> 0 </output>
                         </div>
                     </li>
@@ -46,7 +46,7 @@
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si03" class="form-label mb-1"> Sí </label>
-                            <input id="si03" type="radio" name="preg03" value="1" required>
+                            <input id="si03" type="radio" name="preg03" value="5" required>
                             <label for="no03" class="form-label mb-1"> No </label>
                             <input id="no03" type="radio" name="preg03" value="0" required>
                         </div>
@@ -61,11 +61,11 @@
                             <label for="mala04" class="form-label mb-1"> Mala </label>
                             <input id="mala04" type="radio" name="preg04" value="0" required>
                             <label for="regular04" class="form-label mb-1"> Regular </label>
-                            <input id="regular04" type="radio" name="preg04" value=".25" required>
+                            <input id="regular04" type="radio" name="preg04" value="3" required>
                             <label for="buena04" class="form-label mb-1"> Buena </label>
-                            <input id="buena04" type="radio" name="preg04" value=".5" required>
+                            <input id="buena04" type="radio" name="preg04" value="7" required>
                             <label for="muyBuena04" class="form-label mb-1"> Muy Buena </label>
-                            <input id="muyBuena04" type="radio" name="preg04" value="1" required>
+                            <input id="muyBuena04" type="radio" name="preg04" value="10" required>
                         </div>
                     </li>
                     <!-- PREGUNTA 5 -->
@@ -76,7 +76,7 @@
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si05" class="form-label mb-1"> Sí </label>
-                            <input id="si05" type="radio" name="preg05" value="1" required>
+                            <input id="si05" type="radio" name="preg05" value="5" required>
                             <label for="no05" class="form-label mb-1"> No </label>
                             <input id="no05" type="radio" name="preg05" value="0" required>
                         </div>
@@ -90,7 +90,7 @@
                         <div>
                             <div class="d-flex gap-3 align-items-center">
                                 <label for="si06" class="form-label mb-1"> Sí </label>
-                                <input id="si06" type="radio" name="preg06" value="1" required>
+                                <input id="si06" type="radio" name="preg06" value="15" required>
                                 <label for="no06" class="form-label mb-1"> No </label>
                                 <input id="no06" type="radio" name="preg06" value="0" required>
                             </div>
@@ -107,7 +107,7 @@
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si07" class="form-label mb-1"> Sí </label>
-                            <input id="si07" type="radio" name="preg07" value="1" required>
+                            <input id="si07" type="radio" name="preg07" value="13" required>
                             <label for="no07" class="form-label mb-1"> No </label>
                             <input id="no07" type="radio" name="preg07" value="0" required>
                         </div>
@@ -120,7 +120,7 @@
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si08" class="form-label mb-1"> Sí </label>
-                            <input id="si08" type="radio" name="preg08" value="1" required>
+                            <input id="si08" type="radio" name="preg08" value="12" required>
                             <label for="no08" class="form-label mb-1"> No </label>
                             <input id="no08" type="radio" name="preg08" value="0" required>
                         </div>
@@ -133,7 +133,7 @@
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si09" class="form-label mb-1"> Sí </label>
-                            <input id="si09" type="radio" name="preg09" value="1" required>
+                            <input id="si09" type="radio" name="preg09" value="8" required>
                             <label for="no09" class="form-label mb-1"> No </label>
                             <input id="no09" type="radio" name="preg09" value="0" required>
                         </div>
@@ -146,9 +146,9 @@
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si10" class="form-label mb-1"> Sí </label>
-                            <input id="si10" type="radio" name="preg10" value="1" required>
+                            <input id="si10" type="radio" name="preg10" value="10" required>
                             <label for="parcial10" class="form-label mb-1"> Parcialmente </label>
-                            <input id="parcial10" type="radio" name="preg10" value=".5" required>
+                            <input id="parcial10" type="radio" name="preg10" value="5" required>
                             <label for="no10" class="form-label mb-1"> No </label>
                             <input id="no10" type="radio" name="preg10" value="0" required>
                         </div>
