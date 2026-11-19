@@ -8,9 +8,9 @@
         <!-- FORMULARIO -->
         <div class="bg-black">
             <form class="container formulario bg-black" action="/diagnostico" method="post">
-                <legend class="mb-5"> 
-                    Responda las siguientes preguntas para obtener un diagnóstico al instante
-                </legend>
+                <!-- <legend class="mb-5">  -->
+                    <!-- Responda las siguientes preguntas para obtener un diagnóstico al instante -->
+                <!-- </legend> -->
                 <!-- PREGUNTAS -->
                 <ol class="list-group list-group-numbered">
                     <!-- PREGUNTA 1 -->

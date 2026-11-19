@@ -139,16 +139,17 @@ function abrirBrandomatic() {
     cuestionario.innerHTML = `
         <!-- ENCABEZADO -->
         <div class="bg-black py-4">
-            <h1 class="container text-center text-light"> Brand 'O Matic </h1>
+            <h1 class="container text-center text-light text-uppercase fw-bold"> Brand 'O Matic </h1>
             <p class="container text-center px-5 py-3 text-light"> Completa la siguiente encuesta para obtener un diagnóstico sobre tu marca de forma inmediata. </p>
         </div>
 
         <!-- FORMULARIO -->
         <div class="bg-black">
             <form class="container formulario bg-black" id="cuestionario">
-                <legend class="mb-5"> 
-                    Responda las siguientes preguntas para obtener un diagnóstico al instante
-                </legend>
+                <!-- <legend class="mb-5"> -->
+                <!--    Responda las siguientes preguntas para obtener un diagnóstico al instante -->
+                <!-- </legend> -->
+                <hr class="text-light">
                 <!-- PREGUNTAS -->
                 <ul class="list-group">
                     <!-- PREGUNTA 1 -->
@@ -162,11 +163,12 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si01" class="form-label mb-1"> Sí </label>
-                            <input id="si01" type="radio" name="preg01" value="1" required>
+                            <input id="si01" type="radio" name="preg01" value="12" required>
                             <label for="no01" class="form-label mb-1"> No </label>
                             <input id="no01" type="radio" name="preg01" value="0" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 2 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -178,10 +180,11 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="valor02" class="form-label mb-1"> Porcentaje </label>
-                            <input id="valor02" type="range" value="0" min="0" max="1" step=".25" oninput="this.nextElementSibling.value = this.value * 100" name="preg02" required>
+                            <input id="valor02" type="range" value="0" min="0" max="10" step="1" oninput="this.nextElementSibling.value = this.value * 10" name="preg02" required>
                             <output> 0 </output>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 3 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -193,11 +196,12 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si03" class="form-label mb-1"> Sí </label>
-                            <input id="si03" type="radio" name="preg03" value="1" required>
+                            <input id="si03" type="radio" name="preg03" value="5" required>
                             <label for="no03" class="form-label mb-1"> No </label>
                             <input id="no03" type="radio" name="preg03" value="0" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 4 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -211,13 +215,14 @@ function abrirBrandomatic() {
                             <label for="mala04" class="form-label mb-1"> Mala </label>
                             <input id="mala04" type="radio" name="preg04" value="0" required>
                             <label for="regular04" class="form-label mb-1"> Regular </label>
-                            <input id="regular04" type="radio" name="preg04" value=".25" required>
+                            <input id="regular04" type="radio" name="preg04" value="3" required>
                             <label for="buena04" class="form-label mb-1"> Buena </label>
-                            <input id="buena04" type="radio" name="preg04" value=".5" required>
+                            <input id="buena04" type="radio" name="preg04" value="7" required>
                             <label for="muyBuena04" class="form-label mb-1"> Muy Buena </label>
-                            <input id="muyBuena04" type="radio" name="preg04" value="1" required>
+                            <input id="muyBuena04" type="radio" name="preg04" value="10" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 5 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -229,11 +234,12 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si05" class="form-label mb-1"> Sí </label>
-                            <input id="si05" type="radio" name="preg05" value="1" required>
+                            <input id="si05" type="radio" name="preg05" value="5" required>
                             <label for="no05" class="form-label mb-1"> No </label>
                             <input id="no05" type="radio" name="preg05" value="0" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 6 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -246,7 +252,7 @@ function abrirBrandomatic() {
                         <div>
                             <div class="d-flex gap-3 align-items-center">
                                 <label for="si06" class="form-label mb-1"> Sí </label>
-                                <input id="si06" type="radio" name="preg06" value="1" required>
+                                <input id="si06" type="radio" name="preg06" value="15" required>
                                 <label for="no06" class="form-label mb-1"> No </label>
                                 <input id="no06" type="radio" name="preg06" value="0" required>
                             </div>
@@ -255,6 +261,7 @@ function abrirBrandomatic() {
                             </p>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 7 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -266,11 +273,12 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si07" class="form-label mb-1"> Sí </label>
-                            <input id="si07" type="radio" name="preg07" value="1" required>
+                            <input id="si07" type="radio" name="preg07" value="13" required>
                             <label for="no07" class="form-label mb-1"> No </label>
                             <input id="no07" type="radio" name="preg07" value="0" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 8 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -282,11 +290,12 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si08" class="form-label mb-1"> Sí </label>
-                            <input id="si08" type="radio" name="preg08" value="1" required>
+                            <input id="si08" type="radio" name="preg08" value="12" required>
                             <label for="no08" class="form-label mb-1"> No </label>
                             <input id="no08" type="radio" name="preg08" value="0" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 9 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -298,11 +307,12 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si09" class="form-label mb-1"> Sí </label>
-                            <input id="si09" type="radio" name="preg09" value="1" required>
+                            <input id="si09" type="radio" name="preg09" value="8" required>
                             <label for="no09" class="form-label mb-1"> No </label>
                             <input id="no09" type="radio" name="preg09" value="0" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                     <!-- PREGUNTA 10 -->
                     <li class="pregunta list-group-item bg-black text-light mb-5">
                         <div class="square-marker d-flex align-items-center">
@@ -314,13 +324,14 @@ function abrirBrandomatic() {
                         <div></div>
                         <div class="d-flex gap-3 align-items-center">
                             <label for="si10" class="form-label mb-1"> Sí </label>
-                            <input id="si10" type="radio" name="preg10" value="1" required>
+                            <input id="si10" type="radio" name="preg10" value="10" required>
                             <label for="parcial10" class="form-label mb-1"> Parcialmente </label>
-                            <input id="parcial10" type="radio" name="preg10" value=".5" required>
+                            <input id="parcial10" type="radio" name="preg10" value="5" required>
                             <label for="no10" class="form-label mb-1"> No </label>
                             <input id="no10" type="radio" name="preg10" value="0" required>
                         </div>
                     </li>
+                    <hr class="text-light">
                 </ul>
                 <button 
                     name="enviar_respuestas"
@@ -362,7 +373,7 @@ function abrirBrandomatic() {
                 }
             });
             const diagnostico = document.createElement('DIV');
-            const puntaje = cantPreguntas > 0 ? ((total / cantPreguntas) * 100).toFixed(2) : 0;
+            const puntaje = cantPreguntas > 0 ? total.toFixed(2) : 0;
             diagnostico.classList.add('bg-black');
             diagnostico.classList.add('my-5');
             diagnostico.innerHTML = `
